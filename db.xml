@@ -1,0 +1,189 @@
+<movieDatabase>
+    <movies>
+        <movie>
+            <movie_id>1</movie_id>
+            <title>The Shawshank Redemption</title>
+            <release_year>1994</release_year>
+            <genre>Drama</genre>
+            <duration>142</duration>
+            <director_id>1</director_id>
+            <rating>9.3</rating>
+        </movie>
+        <movie>
+            <movie_id>2</movie_id>
+            <title>The father</title>
+            <release_year>1972</release_year>
+            <genre>Crime</genre>
+            <duration>175</duration>
+            <director_id>2</director_id>
+            <rating>9.2</rating>
+        </movie>
+        <movie>
+            <movie_id>3</movie_id>
+            <title>The Dark Knight</title>
+            <release_year>2008</release_year>
+            <genre>Action</genre>
+            <duration>152</duration>
+            <director_id>3</director_id>
+            <rating>9.0</rating>
+        </movie>
+        <movie>
+            <movie_id>4</movie_id>
+            <title>Pulp Fiction</title>
+            <release_year>1994</release_year>
+            <genre>Crime</genre>
+            <duration>154</duration>
+            <director_id>4</director_id>
+            <rating>8.9</rating>
+        </movie>
+        <movie>
+            <movie_id>5</movie_id>
+            <title>The Lord of the Rings: The Return of the King</title>
+            <release_year>2003</release_year>
+            <genre>Fantasy</genre>
+            <duration>201</duration>
+            <director_id>5</director_id>
+            <rating>8.9</rating>
+        </movie>
+    </movies>
+
+    <directors>
+        <director>
+            <director_id>1</director_id>
+            <name>Frank Darabont</name>
+            <birthdate>1959-01-28</birthdate>
+            <nationality>American</nationality>
+        </director>
+        <director>
+            <director_id>2</director_id>
+            <name>Francis Ford Coppola</name>
+            <birthdate>1939-04-07</birthdate>
+            <nationality>American</nationality>
+        </director>
+        <director>
+            <director_id>3</director_id>
+            <name>Christopher Nolan</name>
+            <birthdate>1970-07-30</birthdate>
+            <nationality>British</nationality>
+        </director>
+        <director>
+            <director_id>4</director_id>
+            <name>Quentin Tarantino</name>
+            <birthdate>1963-03-27</birthdate>
+            <nationality>American</nationality>
+        </director>
+        <director>
+            <director_id>5</director_id>
+            <name>Peter Jackson</name>
+            <birthdate>1961-10-31</birthdate>
+            <nationality>New Zealander</nationality>
+        </director>
+    </directors>
+
+    <actors>
+        <actor>
+            <actor_id>1</actor_id>
+            <name>Tim Robbins</name>
+            <birthdate>1958-10-16</birthdate>
+            <nationality>American</nationality>
+        </actor>
+        <actor>
+            <actor_id>2</actor_id>
+            <name>Morgan Freeman</name>
+            <birthdate>1937-06-01</birthdate>
+            <nationality>American</nationality>
+        </actor>
+        <actor>
+            <actor_id>3</actor_id>
+            <name>Christian Bale</name>
+            <birthdate>1974-01-30</birthdate>
+            <nationality>British</nationality>
+        </actor>
+        <actor>
+            <actor_id>4</actor_id>
+            <name>Leonardo DiCaprio</name>
+            <birthdate>1974-11-11</birthdate>
+            <nationality>American</nationality>
+        </actor>
+        <actor>
+            <actor_id>5</actor_id>
+            <name>Ian McKellen</name>
+            <birthdate>1939-05-25</birthdate>
+            <nationality>British</nationality>
+        </actor>
+    </actors>
+
+    <movie_actors>
+        <entry>
+            <movie_id>1</movie_id>
+            <actor_id>1</actor_id>
+        </entry>
+        <entry>
+            <movie_id>1</movie_id>
+            <actor_id>2</actor_id>
+        </entry>
+        <entry>
+            <movie_id>2</movie_id>
+            <actor_id>3</actor_id>
+        </entry>
+        <entry>
+            <movie_id>3</movie_id>
+            <actor_id>4</actor_id>
+        </entry>
+        <entry>
+            <movie_id>5</movie_id>
+            <actor_id>5</actor_id>
+        </entry>
+    </movie_actors>
+
+    <genres>
+        <genre>
+            <genre_id>1</genre_id>
+            <genre_name>Drama</genre_name>
+        </genre>
+        <genre>
+            <genre_id>2</genre_id>
+            <genre_name>Crime</genre_name>
+        </genre>
+        <genre>
+            <genre_id>3</genre_id>
+            <genre_name>Action</genre_name>
+        </genre>
+        <genre>
+            <genre_id>4</genre_id>
+            <genre_name>Fantasy</genre_name>
+        </genre>
+    </genres>
+
+    <reviews>
+        <review>
+            <review_id>1</review_id>
+            <movie_id>1</movie_id>
+            <user_id>1</user_id>
+            <rating>10</rating>
+            <comment>A masterpiece of storytelling!</comment>
+            <review_date>2024-10-01</review_date>
+        </review>
+        <review>
+            <review_id>2</review_id>
+            <movie_id>2</movie_id>
+            <user_id>2</user_id>
+            <rating>9</rating>
+            <comment>Timeless classic!</comment>
+            <review_date>2024-10-02</review_date>
+        </review>
+    </reviews>
+
+    <users>
+        <user>
+            <user_id>1</user_id>
+            <username>mounir</username>
+            <email>mounir@gmail.com</email>
+        </user>
+        <user>
+            <user_id>2</user_id>
+            <username>mustapha</username>
+            <email>mustapha@gmail.com</email>
+        </user>
+    </users>
+</movieDatabase>
