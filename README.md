@@ -104,9 +104,9 @@ const xpath = require("xpath");
    ```xquery
    let $ratings := doc("movieDatabase")/movieDatabase/movies/movie/rating
    return avg($ratings)
-   Installation and Setup
-
    ```
+
+### Installation and Setup
 
 ## Install Dependencies: Clone the project and run:
 
