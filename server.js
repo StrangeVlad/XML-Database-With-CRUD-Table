@@ -1,6 +1,7 @@
 const fs = require("fs");
 const express = require("express");
 const bodyParser = require("body-parser");
+const { exec } = require("child_process");
 const { DOMParser, XMLSerializer } = require("xmldom");
 const xpath = require("xpath");
 
@@ -14,11 +15,27 @@ function loadXMLData() {
   return new DOMParser().parseFromString(xmlData, "text/xml");
 }
 
-// Save XML data
-function saveXMLData(xmlDoc) {
-  const xmlString = new XMLSerializer().serializeToString(xmlDoc);
-  fs.writeFileSync("movieDatabase.xml", xmlString, "utf8");
-}
+// Execute XQuery
+app.post("/execute-xquery", (req, res) => {
+  const { query } = req.body;
+
+  // Construct the command to execute XQuery
+  const command = `xbase --query "${query}"`; // Adjust this command based on your XBase setup
+
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing XQuery: ${error.message}`);
+      return res.status(500).json({ error: error.message });
+    }
+    if (stderr) {
+      console.error(`Error: ${stderr}`);
+      return res.status(500).json({ error: stderr });
+    }
+    console.log(`XQuery Results: ${stdout}`);
+    // Send the results back as JSON
+    res.json({ results: stdout });
+  });
+});
 
 // Get all movies
 app.get("/movies", (req, res) => {
@@ -118,6 +135,33 @@ app.delete("/movies/:id", (req, res) => {
   } else {
     res.sendStatus(404);
   }
+});
+
+// Remove the exec command section
+app.post("/execute-xquery", (req, res) => {
+  const xquery = req.body.query; // Get the XQuery from the request body
+  console.log("Received XQuery:", xquery);
+
+  const xmlDoc = loadXMLData(); // Load your XML data
+  const nodes = xpath.select(xquery, xmlDoc); // Execute the XQuery (XPath)
+
+  if (!nodes || nodes.length === 0) {
+    console.log("No results found for the query.");
+    return res.status(404).json({ error: "No results found" });
+  }
+
+  const results = nodes.map((node) => ({
+    id: node.getElementsByTagName("movie_id")[0].textContent,
+    title: node.getElementsByTagName("title")[0].textContent,
+    releaseYear: node.getElementsByTagName("release_year")[0].textContent,
+    genre: node.getElementsByTagName("genre")[0].textContent,
+    duration: node.getElementsByTagName("duration")[0].textContent,
+    directorId: node.getElementsByTagName("director_id")[0].textContent,
+    rating: node.getElementsByTagName("rating")[0].textContent,
+  }));
+
+  console.log("Query results:", results); // Log the results
+  res.json(results); // Return the results as JSON
 });
 
 app.listen(3000, () => console.log("Server running on port 3000"));

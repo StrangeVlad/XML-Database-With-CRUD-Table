@@ -54,6 +54,20 @@
       /><br />
       <button type="button" onclick="submitMovie()">Submit</button>
     </form>
+    <div>
+      <h4>Execute XQuery:</h4>
+      <input
+        type="text"
+        id="xqueryInput"
+        placeholder="Enter your XQuery here"
+      />
+      <button onclick="executeXQuery()">Execute</button>
+    </div>
+    <div id="xqueryResults" style="margin-top: 20px">
+      <h4>Results:</h4>
+      <pre id="resultsContent"></pre>
+    </div>
+
     <div
       id="xmlOutput"
       style="

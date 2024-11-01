@@ -97,4 +97,28 @@ function deleteMovie(id) {
   fetch(`/movies/${id}`, { method: "DELETE" }).then(() => loadMovies());
 }
 
+function executeXQuery() {
+  const query = document.getElementById("xqueryInput").value;
+
+  fetch("/execute-xquery", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        return response.json().then((error) => {
+          throw new Error(error.error || "Network response was not ok");
+        });
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("XQuery Results:", data); // Handle the results
+    })
+    .catch((error) => {
+      console.error("Error executing XQuery:", error);
+    });
+}
+
 loadMovies();
