@@ -106,7 +106,7 @@ const xpath = require("xpath");
    return avg($ratings)
    ```
 
-### Installation and Setup
+# Installation and Setup
 
 ## Install Dependencies: Clone the project and run:
 
