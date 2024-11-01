@@ -13,7 +13,7 @@
             <movie_id>2</movie_id>
             <title>The father</title>
             <release_year>1972</release_year>
-            <genre>Crime</genre>
+            <genre>2</genre>
             <duration>175</duration>
             <director_id>2</director_id>
             <rating>9.2</rating>
@@ -31,7 +31,7 @@
             <movie_id>4</movie_id>
             <title>Pulp Fiction</title>
             <release_year>1994</release_year>
-            <genre>Crime</genre>
+            <genre>2</genre>
             <duration>154</duration>
             <director_id>4</director_id>
             <rating>8.9</rating>
@@ -45,7 +45,7 @@
             <director_id>5</director_id>
             <rating>8.9</rating>
         </movie>
-    </movies>
+    <movie><movie_id>6</movie_id><title>blablabla</title><release_year>2017</release_year><genre>drama</genre><duration>100</duration><director_id>3</director_id><rating>8.5</rating></movie><movie><movie_id>7</movie_id><title>test2</title><release_year>2022</release_year><genre>drama</genre><duration>120</duration><director_id>3</director_id><rating>7</rating></movie></movies>
 
     <directors>
         <director>
