@@ -46,9 +46,18 @@ const xpath = require("xpath");
 
 ### XQuery Execution Examples
 
+<<<<<<< HEAD
 1. **Select all movies**:
    ```xquery
    for $x in doc("movieDatabase")/movieDatabase/movies/movie
+=======
+for $x in doc('C:/Users/Aures/Desktop/XML-Database-With-CRUD-Table-master/movieDatabase.xml')//actor
+return $x
+
+1. **Select all movies**:
+   ```xquery
+   for $x in doc('C:/Users/Aures/Desktop/XML-Database-With-CRUD-Table-master/movieDatabase.xml')/movieDatabase/movies/movie
+>>>>>>> a2e79d3 (second commit)
    return $x
    ```
 2. **Select all actors, directors, or users**:

@@ -4,6 +4,11 @@ const bodyParser = require("body-parser");
 const { exec } = require("child_process");
 const { DOMParser, XMLSerializer } = require("xmldom");
 const xpath = require("xpath");
+<<<<<<< HEAD
+=======
+const xmlFilePath =
+  "C:/Users/Aures/Desktop/XML-Database-With-CRUD-Table-master/movieDatabase.xml";
+>>>>>>> a2e79d3 (second commit)
 
 const app = express();
 app.use(bodyParser.json());
@@ -14,13 +19,24 @@ function loadXMLData() {
   const xmlData = fs.readFileSync("movieDatabase.xml", "utf8");
   return new DOMParser().parseFromString(xmlData, "text/xml");
 }
+<<<<<<< HEAD
+=======
+function saveXMLData(xmlDoc) {
+  const xmlString = new XMLSerializer().serializeToString(xmlDoc);
+  fs.writeFileSync("movieDatabase.xml", xmlString, "utf8");
+}
+>>>>>>> a2e79d3 (second commit)
 
 // Execute XQuery
 app.post("/execute-xquery", (req, res) => {
   const { query } = req.body;
 
   // Construct the command to execute XQuery
+<<<<<<< HEAD
   const command = `xbase --query "${query}"`; // Adjust this command based on your XBase setup
+=======
+  const command = `basex -i "${xmlFilePath}" --query "${query}"`;
+>>>>>>> a2e79d3 (second commit)
 
   exec(command, (error, stdout, stderr) => {
     if (error) {

@@ -11,7 +11,11 @@
         </movie>
         <movie>
             <movie_id>2</movie_id>
+<<<<<<< HEAD
             <title>The father</title>
+=======
+            <title>The father 2</title>
+>>>>>>> a2e79d3 (second commit)
             <release_year>1972</release_year>
             <genre>2</genre>
             <duration>175</duration>
@@ -27,6 +31,7 @@
             <director_id>3</director_id>
             <rating>9.0</rating>
         </movie>
+<<<<<<< HEAD
         <movie>
             <movie_id>4</movie_id>
             <title>Pulp Fiction</title>
@@ -36,6 +41,9 @@
             <director_id>4</director_id>
             <rating>8.9</rating>
         </movie>
+=======
+        
+>>>>>>> a2e79d3 (second commit)
         <movie>
             <movie_id>5</movie_id>
             <title>The Lord of the Rings: The Return of the King</title>
@@ -45,7 +53,11 @@
             <director_id>5</director_id>
             <rating>8.9</rating>
         </movie>
+<<<<<<< HEAD
     <movie><movie_id>6</movie_id><title>blablabla</title><release_year>2017</release_year><genre>drama</genre><duration>100</duration><director_id>3</director_id><rating>8.5</rating></movie><movie><movie_id>7</movie_id><title>test2</title><release_year>2022</release_year><genre>drama</genre><duration>120</duration><director_id>3</director_id><rating>7</rating></movie></movies>
+=======
+    <movie><movie_id>6</movie_id><title>blablabla</title><release_year>2017</release_year><genre>drama</genre><duration>100</duration><director_id>3</director_id><rating>8.5</rating></movie><movie><movie_id>7</movie_id><title>test7</title><release_year>2024</release_year><genre>test</genre><duration>120</duration><director_id>15</director_id><rating>15</rating></movie></movies>
+>>>>>>> a2e79d3 (second commit)
 
     <directors>
         <director>
