@@ -115,14 +115,10 @@ function executeXQuery() {
     })
     .then((data) => {
       console.log("XQuery Results:", data); // Handle the results
-<<<<<<< HEAD
-=======
-
       // Display the XQuery results in the #resultsContent element
       const resultsContent = document.getElementById("resultsContent");
       resultsContent.textContent = data.results || "No results returned.";
       document.getElementById("xqueryResults").style.display = "block"; // Show results section
->>>>>>> a2e79d3 (second commit)
     })
     .catch((error) => {
       console.error("Error executing XQuery:", error);
@@ -130,3 +126,4 @@ function executeXQuery() {
 }
 
 loadMovies();
+
